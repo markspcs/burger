@@ -1,0 +1,42 @@
+<div class="header d-flex align-items-center justify-content-center">
+  <img class="brgr" src="./assets/images/brgr.png" ><h1>The Burgers</h1>
+</div>
+<div class="container mt-5">
+  <div id="main" class="row row-cols-md-3 row-cols-1 ">
+      <div class="col mb-4">
+        <h2>Ready to Eat!</h2>
+        <ul>
+          {{#each burgers}}
+            {{#unless eaten}}
+              {{> brgrPart eaten=true}}
+            {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="col mb-4">
+        <h2>Add a Burger</h2>
+        <form class="create-form">
+
+          <div class="form-group">
+            <label for="ca">Burger Name:</label>
+            <input type="text" id="ca" name="name">
+          </div>
+
+          <button type="submit">Add a Burger</button>
+        </form>
+      </div>
+
+      <div class="col mb-4">
+        <h2>Burgers eaten!</h2>
+        <ul>
+          {{#each burgers}}
+            {{#if eaten}}
+              {{> brgrPart eaten=false}}
+            {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
+  </div>
