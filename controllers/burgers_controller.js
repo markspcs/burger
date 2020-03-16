@@ -18,12 +18,12 @@ router.post("/api/burgers", (req, res) => {
 });
 
 router.put("/api/burgers/:id", function(req, res) {
-  const condition = `id = ${req.params.id}`;
+  var putIt = `id = ${req.params.id}`;
   brgr.update(
     {
       eaten: req.body.eaten,
     },
-    condition,
+    putIt,
     function(result) {
       if (result.changedRows === 0) {
         return res.status(404).end();
