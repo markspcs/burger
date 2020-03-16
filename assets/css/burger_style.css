@@ -1,6 +1,9 @@
+  body {
+      background-color: rgb(207, 156, 79) ;
+  }
   .header {
     color: white; 
-    background-color: salmon;  
+    background-color:rgb(207, 156, 79) ;  
   }
   
   .brgr {
@@ -9,6 +12,6 @@
   li {
     padding: 5px;
     margin: 5px;
-    background: salmon;
+    background: orange;
   }
   
