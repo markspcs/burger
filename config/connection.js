@@ -10,14 +10,7 @@ if (process.env.JAWSDB_URL) {
     password: 'cbr954rr',
     database: 'burger_db',
   });
-}
+};
 
-connection.connect((err) => {
-  if (err) {
-    console.error(`error in connection.js connection.connect: ${err}` );
-    return;
-  }
-  console.log(`connection id ${connection.threadId}`);
-});
-
+connection.connect();
 module.exports = connection;
