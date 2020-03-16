@@ -1,0 +1,14 @@
+  .header {
+    color: white; 
+    background-color: salmon;  
+  }
+  
+  .brgr {
+    width: 100px;
+  }
+  li {
+    padding: 5px;
+    margin: 5px;
+    background: salmon;
+  }
+  

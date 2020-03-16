@@ -1,7 +1,7 @@
 $(function() {
-    $('.change-eaten').on('click', function(event) {
+    $('.classEaten').on('click', function(event) {
       const id = $(this).data('id');
-      const newEaten = $(this).data('neweaten');
+      const newEaten = $(this).data('eaten');
   
       const newEatenState = {
         eaten: newEaten
@@ -20,12 +20,12 @@ $(function() {
       );
     });
   
-    $('.create-form').on('submit', function(event) {
+    $('.add-burger').on('submit', function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
       const newBurger = {
-        name: $('#ca').val().trim(),
+        name: $('#burger-name').val().trim(),
         eaten: false,
       };
   
